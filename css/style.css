@@ -9,16 +9,6 @@ html {
     font-size: 1.0rem;
     font-family: 'Montserrat', sans-serif;
 }
-/* @media (max-width: 480px) {
-    html {
-        font-size: 62.5%;
-    }
-}
-@media (max-width: 768px) {
-    html {
-        font-size: 62.5%;
-    }
-} */
 :root {
     --cor-destaque: #f52626;
 }
@@ -49,6 +39,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     height: 40px;
     padding: 5px;
     background: #ffffff;
+    transition: all 0.2s ease-in;
 }
 #inputPesquisarParticipante {
     border: none;
@@ -69,12 +60,17 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.150s ease-in;
+}
+#inputPesquisarParticipante:focus ~ .icone-search-button {
+    background: var(--cor-destaque);
 }
 .cabecalho__comprar-rifa {
     text-decoration: none;
     font-size: 1.0rem;
     color: #262626;
     font-weight: bold;
+    margin-right: 5px;
 }
 .conteudo-principal {
     margin-top: 30px;
@@ -99,7 +95,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     font-size: 1.2rem;
     font-weight: bold;
     color: #262626;
-    margin: 20px 0
+    margin: 20px 0;
 }
 .conteudo-principal__informacoes__premios {
     text-align: center;
@@ -132,15 +128,20 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     background: #f8f8f8;
     padding: 20px 10px;
     border-radius: 5px;
+    box-shadow: -2px 2px 8px rgb(212, 212, 212);
+    transition: 0.150s ease-in;
+}
+.conteudo-principal__informacoes__premios-item:hover {
+    transform: translateY(-5px);
 }
 .conteudo-principal__informacoes__premios-item:nth-child(1) {
-    color: #FDCD03;
+    color: #00c176;
 }
 .conteudo-principal__informacoes__premios-item:nth-child(2) {
-    color: #24BFFF;
+    color: #ff003c;
 }
 .conteudo-principal__informacoes__premios-item:nth-child(3) {
-    color: #ff8f04;
+    color: #ff8a00;
 }
 .conteudo-principal__informacoes__meta-alcancada {
     margin-top: 30px;
@@ -194,6 +195,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     margin-top: 5px;
     min-height: 50px;
 }
+.conteudo-principal__participantes-lista__item .titulo {
+    font-weight: bold;
+}
 .conteudo-principal__participantes-lista__numero {
     width: 10%;
     display: block;
@@ -202,7 +206,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .conteudo-principal__participantes-lista__nome-participante {
     width: 90%;
     display: block;
-    word-break: keep-all;
 }
 .rodape {
     margin-top: 30px;
@@ -210,7 +213,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     text-align: center;
     background: #1a1a1a;
     color: #fff;
-    padding: 10px;
+    padding: 15px;
     font-size: 1.0rem;
 }
 .rodape__instagram-comitebg {
@@ -226,14 +229,18 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         flex-direction: column;
     }
     .conteudo-principal__informacoes__premios-item {
-        margin-top: 10px;
-        width: 60%;
+        margin-top: 30px;
+        width: 80%;
+        
     }
     .conteudo-principal__informacoes__premios-item:nth-child(1) {
         margin-top: 0;
     }
 }
 @media (max-width: 512px) {
+    html {
+        font-size: 0.9rem;
+    }
     .cabecalho {
         padding: 25px 0;
     }
@@ -244,11 +251,16 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     .cabecalho__barra-de-pesquisa {
         width: 100%;
         padding: 5px;
+        height: 45px;
         margin-top: 10px;
     }
     #inputPesquisarParticipante {
         line-height: 40px;
         width: 100%;
+    }
+    .cabecalho__comprar-rifa {
+        font-size: 1.1rem;
+        margin-right: 0px;
     }
 }
 
