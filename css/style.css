@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-size: 1.0rem;
+    font-family: 'Montserrat', sans-serif;
+}
+/* @media (max-width: 480px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+} */
+:root {
+    --cor-destaque: #f52626;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+.container {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cabecalho {
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 15px 0;
+}
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecalho__barra-de-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 40px;
+    padding: 5px;
+    background: #ffffff;
+}
+#inputPesquisarParticipante {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0 5px;
+    line-height: 40px;
+    width: 190px;
+    font-family: 'Montserrat', sans-serif;
+}
+.icone-search-button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 50%;
+    background: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cabecalho__comprar-rifa {
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: #262626;
+    font-weight: bold;
+}
+.conteudo-principal {
+    margin-top: 30px;
+}
+.conteudo-principal__informacoes__titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-destaque);
+    position: relative;
+}
+.conteudo-principal__informacoes__titulo:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--cor-destaque);
+    transform: scaleX(0.1);
+}
+.conteudo-principal__informacoes__subtitulo {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #262626;
+    margin: 20px 0
+}
+.conteudo-principal__informacoes__premios {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cor-destaque);
+    position: relative;
+}
+.conteudo-principal__informacoes__premios:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--cor-destaque);
+    transform: scaleX(0.1);
+}
+.conteudo-principal__informacoes__premios-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;    
+    width: 100%;
+}
+.conteudo-principal__informacoes__premios-item {
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: #f8f8f8;
+    padding: 20px 10px;
+    border-radius: 5px;
+}
+.conteudo-principal__informacoes__premios-item:nth-child(1) {
+    color: #FDCD03;
+}
+.conteudo-principal__informacoes__premios-item:nth-child(2) {
+    color: #24BFFF;
+}
+.conteudo-principal__informacoes__premios-item:nth-child(3) {
+    color: #ff8f04;
+}
+.conteudo-principal__informacoes__meta-alcancada {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #262626;
+}
+.conteudo-principal__informacoes__meta-alcancada span {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+.conteudo-principal__informacoes__qtd-participantes {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 5px;
+    color: #262626;
+    font-size: 1.1rem;
+}
+.conteudo-principal__informacoes__qtd-participantes .numero-de-participantes{
+    color: var(--cor-destaque);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.conteudo-principal__texto-lista-participantes {
+    margin-top: 35px;
+    color: #262626;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.conteudo-principal__participantes-lista {
+    margin-top: 10px;
+    width: 100%;
+    background: #e4e4e4;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.0rem;
+    color: #262626;
+}
+.conteudo-principal__participantes-lista__item {
+    background: #ffffff;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-top: 5px;
+    min-height: 50px;
+}
+.conteudo-principal__participantes-lista__numero {
+    width: 10%;
+    display: block;
+    float: left;
+}
+.conteudo-principal__participantes-lista__nome-participante {
+    width: 90%;
+    display: block;
+    word-break: keep-all;
+}
+.rodape {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.0rem;
+}
+.rodape__instagram-comitebg {
+    color: #24bfff;
+}
+@media (max-width: 1040px) {
+    .container {
+        width: 90%;
+    }
+}
+@media (max-width: 740px) {
+    .conteudo-principal__informacoes__premios-container {
+        flex-direction: column;
+    }
+    .conteudo-principal__informacoes__premios-item {
+        margin-top: 10px;
+        width: 60%;
+    }
+    .conteudo-principal__informacoes__premios-item:nth-child(1) {
+        margin-top: 0;
+    }
+}
+@media (max-width: 512px) {
+    .cabecalho {
+        padding: 25px 0;
+    }
+    .cabecalho .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cabecalho__barra-de-pesquisa {
+        width: 100%;
+        padding: 5px;
+        margin-top: 10px;
+    }
+    #inputPesquisarParticipante {
+        line-height: 40px;
+        width: 100%;
+    }
+}
+
+
+
+
+
